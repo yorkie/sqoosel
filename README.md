@@ -2,6 +2,8 @@
 Sqoosel
 ============================
 
+[![Build Status](https://travis-ci.org/yorkie/sqoosel.svg?branch=master)](https://travis-ci.org/yorkie/sqoosel)
+
 SQL-based Application Framework for Node.js
 
 [![NPM](https://nodei.co/npm/sqoosel.png?stars&downloads)](https://nodei.co/npm/sqoosel/)
@@ -15,7 +17,7 @@ $ npm install sqoosel --save
 
 ### Usage
 
-1. Define your SQL engine
+##### Define your SQL engine
 
 ```js
 var sqoosel = require('sqoosel');
@@ -31,7 +33,7 @@ sqoosel({
 
 The passing callback `exec` will receive 4 arguments, then they are: `exec(err, queryfn, closefn, client)`.
 
-2. Define your schema and model
+##### Define your schema and model
 
 ```js
 var sqoosel = require('sqoosel');
@@ -46,7 +48,7 @@ module.exports = sqoosel.model('user', UserSchema);
 ```
 So close to [mongoose](https://github.com/mongoose/mongoose) ?
 
-3. Using your model in your controller or anywhere that you want to use
+##### Using your model in your controller or anywhere that you want to use
 
 ```js
 var User = require('../find/your/model');
@@ -70,7 +72,7 @@ router.get('/register/', function(req, res, next) {
 
 For more function-based SQL generation, you should move forward to [brianc/node-sql](https://github.com/brianc/node-sql)
 
-4. It's SQL database, we need to apply your schemas, very simple to call `createReadStream` with your model
+##### It's SQL database, we need to apply your schemas, very simple to call `createReadStream` with your model
 
 Now show you howto generate `.sql` init script:
 
