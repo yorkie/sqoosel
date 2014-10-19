@@ -1,0 +1,3 @@
+
+postgres:
+	sh ./postgres.sh
